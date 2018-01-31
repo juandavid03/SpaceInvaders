@@ -10,5 +10,14 @@ public class Bala : MonoBehaviour
     {
         this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 200));
 	}
-	
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
+    }
+
 }
