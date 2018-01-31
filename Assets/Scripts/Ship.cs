@@ -6,6 +6,8 @@ public class Ship : MonoBehaviour
 {
     private Rigidbody2D nave;
 
+    public GameObject bala;
+
     public int force;
 	// Use this for initialization
 	void Start ()
@@ -33,6 +35,11 @@ public class Ship : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.D))
         {
             nave.AddForce(new Vector2(-force, 0));
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Instantiate(bala, this.transform.position, Quaternion.identity);
         }
     }
 }
