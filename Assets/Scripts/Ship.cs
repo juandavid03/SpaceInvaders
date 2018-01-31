@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class Ship : MonoBehaviour
     public GameObject bala;
 
     public int force;
+
+    public bool canShoot = true;
 	// Use this for initialization
 	void Start ()
     {
@@ -39,7 +42,18 @@ public class Ship : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            Instantiate(bala, this.transform.position, Quaternion.identity);
+            if (canShoot)
+            {
+                Instantiate(bala, this.transform.position, Quaternion.identity);
+                StartCoroutine(enableGunCR());
+                canShoot = false;
+            }
         }
+    }
+
+    private IEnumerator enableGunCR()
+    {
+        yield return new WaitForSeconds(0.7f);
+        canShoot = true;
     }
 }
