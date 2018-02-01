@@ -16,10 +16,10 @@ TagManager:
   - 
   - 
   - Enemigo
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Bullet
+  - Enemy Bullet
+  - Borders
   - 
   - 
   - 

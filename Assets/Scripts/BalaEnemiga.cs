@@ -2,33 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bala : MonoBehaviour
+public class BalaEnemiga : MonoBehaviour
 {
-    public Ship ship;
-
     public int speed;
+    public Ship ship;
 	// Use this for initialization
 	void Start ()
     {
-        ship = GameObject.Find("Ship").GetComponent<Ship>();
         this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, speed));
-	}
+        ship = GameObject.Find("Ship").GetComponent<Ship>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 9)
         {
-            ship.score += collision.gameObject.GetComponent<Enemy>().puntaje;
-            Destroy(collision.gameObject);
+            ship.RecibirDaño();
             Destroy(this.gameObject);
         }
         if (collision.gameObject.layer == 12)
         {
             Destroy(this.gameObject);
-        }
-        if (collision.gameObject.layer == 11)
-        {
-            Destroy(collision.gameObject);
         }
     }
 
