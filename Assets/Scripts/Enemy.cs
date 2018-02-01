@@ -12,13 +12,15 @@ public class Enemy : MonoBehaviour
     public int direccion;
 
     public int fuerza;
-    public int puntaje; 
+    public int puntaje;
+
+    public Ship ship;
 
 	// Use this for initialization
 	void Start ()
     {
         enemigo = this.gameObject.GetComponent<Rigidbody2D>();
-        
+        ship = GameObject.Find("Ship").GetComponent<Ship>();
     }
 	
 	// Update is called once per frame
@@ -41,6 +43,11 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Side"))
         {
             isGoingRight = !isGoingRight;
+        }
+
+        if (collision.gameObject.CompareTag("Bottom"))
+        {
+           ship.RecibirDaño();
         }
     }
 }

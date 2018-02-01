@@ -5,11 +5,13 @@ using UnityEngine;
 public class Bala : MonoBehaviour
 {
     public Ship ship;
+
+    public int speed;
 	// Use this for initialization
 	void Start ()
     {
         ship = GameObject.Find("Ship").GetComponent<Ship>();
-        this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 200));
+        this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, speed));
 	}
 
     private void OnCollisionEnter2D(Collision2D collision)

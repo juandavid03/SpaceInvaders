@@ -103,6 +103,8 @@ MonoBehaviour:
   enemigo: {fileID: 0}
   direccion: 0
   fuerza: 8
+  puntaje: 100
+  ship: {fileID: 0}
 --- !u!212 &212622743976951542
 SpriteRenderer:
   m_ObjectHideFlags: 1
