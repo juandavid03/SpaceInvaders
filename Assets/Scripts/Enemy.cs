@@ -52,6 +52,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Bottom"))
         {
            ship.RecibirDaño();
+            Destroy(this.gameObject);
         }
     }
 }

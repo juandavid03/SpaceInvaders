@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Ship : MonoBehaviour
 {
@@ -60,6 +59,10 @@ public class Ship : MonoBehaviour
                 StartCoroutine(enableGunCR());
                 canShoot = false;
             }
+        }
+        if (vidas < 0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 
