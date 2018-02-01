@@ -30,14 +30,21 @@ public class Ship : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Debug.Log(vidas);
         vidasText.text = vidas.ToString();
         scoreText.text = score.ToString();
         if (Input.GetKeyDown(KeyCode.A))
         {
             nave.AddForce(new Vector2(-force, 0));
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+            if (PlayerPrefs.GetInt("HighScore") > score)
+            {
 
+                PlayerPrefs.SetInt("HighScore", score);
+            }
+        }
         if (Input.GetKeyDown(KeyCode.D))
         {
             nave.AddForce(new Vector2(force, 0));
@@ -63,6 +70,10 @@ public class Ship : MonoBehaviour
         }
         if (vidas < 0)
         {
+            if (PlayerPrefs.GetInt("HighScore") > score)
+            {
+                PlayerPrefs.SetInt("HighScore", score);
+            }
             SceneManager.LoadScene("GameOver");
         }
     }

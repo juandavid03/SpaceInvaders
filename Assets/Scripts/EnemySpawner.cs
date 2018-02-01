@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
         tiempo -= Time.deltaTime;
         if (tiempo <= 0)
         {
-            tiempo = UnityEngine.Random.Range(1, 10);
+            tiempo = UnityEngine.Random.Range(3, 10);
             InstantiateEnemy();
 
         }

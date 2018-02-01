@@ -115,7 +115,7 @@ MonoBehaviour:
   isGoingRight: 0
   enemigo: {fileID: 0}
   direccion: 0
-  fuerza: 10
+  fuerza: 20
   puntaje: 150
   ship: {fileID: 0}
 --- !u!212 &212622743976951542

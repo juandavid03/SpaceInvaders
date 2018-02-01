@@ -26,10 +26,7 @@ public class Enemy : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (PlayerPrefs.GetInt("HighScore") > puntaje)
-        {
-            PlayerPrefs.SetInt("HighScore", puntaje);
-        }
+
         enemigo.AddForce(new Vector2(direccion * fuerza, 0));
         if (isGoingRight)
         {

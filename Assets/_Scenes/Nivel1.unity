@@ -367,7 +367,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 1627958868285436, guid: b37aa9f6d908aec469c19fb20f6b4071, type: 2}
+  - {fileID: 1627958868285436, guid: b37aa9f6d908aec469c19fb20f6b4071, type: 2}
   - {fileID: 1627958868285436, guid: b3969778290083643a4ede8bc3c8e85f, type: 2}
+  - {fileID: 1627958868285436, guid: b3969778290083643a4ede8bc3c8e85f, type: 2}
+  - {fileID: 1627958868285436, guid: 97a4d8b409b5bb24486210f0ddbf61d9, type: 2}
   tiempo: 0
   index: 0
 --- !u!4 &527350217
