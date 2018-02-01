@@ -10,7 +10,7 @@ public class MenuManager : MonoBehaviour
         {
             LoadScene("Nivel1");
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "Highscore"))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             LoadScene("MainMenu");
         }
