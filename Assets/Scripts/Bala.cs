@@ -21,12 +21,14 @@ public class Bala : MonoBehaviour
             ship.score += collision.gameObject.GetComponent<Enemy>().puntaje;
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
+
         }
         if (collision.gameObject.layer == 8 && collision.gameObject.CompareTag("SuperShip"))
         {
             ship.score += collision.gameObject.GetComponent<Enemy>().puntaje;
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
+            SuperSpawner.Instance.canSpawn = true;
         }
         if (collision.gameObject.layer == 12)
         {

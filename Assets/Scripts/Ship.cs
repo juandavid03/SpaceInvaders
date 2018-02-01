@@ -30,6 +30,7 @@ public class Ship : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        Debug.Log(vidas);
         vidasText.text = vidas.ToString();
         scoreText.text = score.ToString();
         if (Input.GetKeyDown(KeyCode.A))
@@ -68,7 +69,7 @@ public class Ship : MonoBehaviour
 
     private IEnumerator enableGunCR()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.4f);
         canShoot = true;
     }
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Side
   - Bottom
+  - SuperShip
   layers:
   - Default
   - TransparentFX

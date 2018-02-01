@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship: {fileID: 0}
-  speed: 500
+  speed: 650
 --- !u!212 &212938341152770080
 SpriteRenderer:
   m_ObjectHideFlags: 1
