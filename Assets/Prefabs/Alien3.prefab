@@ -23,8 +23,9 @@ GameObject:
   - component: {fileID: 114940564305826652}
   - component: {fileID: 50949927895377074}
   - component: {fileID: 61350560704217814}
+  - component: {fileID: 114316968141476598}
   m_Layer: 8
-  m_Name: Alien2
+  m_Name: Alien3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1627958868285436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.48, z: 0}
+  m_LocalPosition: {x: -0.12480658, y: -1.3192992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,6 +89,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0271575, y: 0.6814091}
   m_EdgeRadius: 0
+--- !u!114 &114316968141476598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1627958868285436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cfb150da14301f46b896c533076337d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114940564305826652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,8 +114,8 @@ MonoBehaviour:
   isGoingRight: 0
   enemigo: {fileID: 0}
   direccion: 0
-  fuerza: 15
-  puntaje: 100
+  fuerza: 10
+  puntaje: 150
   ship: {fileID: 0}
 --- !u!212 &212622743976951542
 SpriteRenderer:
@@ -137,8 +149,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1379cde875c30d34091a6e284e3583d0, type: 3}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 83da48ea8bce7d244b23cc34e93a9bff, type: 3}
+  m_Color: {r: 0.94482756, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
