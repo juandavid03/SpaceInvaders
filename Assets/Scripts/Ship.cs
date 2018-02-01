@@ -12,6 +12,8 @@ public class Ship : MonoBehaviour
     public int force;
 
     public bool canShoot = true;
+
+    public int score = 0;
 	// Use this for initialization
 	void Start ()
     {

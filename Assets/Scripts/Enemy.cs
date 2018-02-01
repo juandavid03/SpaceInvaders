@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
 
     public bool isGoingRight;
@@ -12,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
     public int direccion;
 
     public int fuerza;
+    public int puntaje; 
 
 	// Use this for initialization
 	void Start ()

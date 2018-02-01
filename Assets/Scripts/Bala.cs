@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Bala : MonoBehaviour
 {
-
+    public Ship ship;
 	// Use this for initialization
 	void Start ()
     {
+        ship = GameObject.Find("Ship").GetComponent<Ship>();
         this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 200));
 	}
 
@@ -15,6 +16,7 @@ public class Bala : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
+            ship.score += collision.gameObject.GetComponent<Enemy>().puntaje;
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
