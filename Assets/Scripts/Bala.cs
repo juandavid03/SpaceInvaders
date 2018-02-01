@@ -22,6 +22,12 @@ public class Bala : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
+        if (collision.gameObject.layer == 8 && collision.gameObject.CompareTag("SuperShip"))
+        {
+            ship.score += collision.gameObject.GetComponent<Enemy>().puntaje;
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
         if (collision.gameObject.layer == 12)
         {
             Destroy(this.gameObject);

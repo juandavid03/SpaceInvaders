@@ -8,7 +8,6 @@ public class MenuManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K) && SceneManager.GetActiveScene().name == "Tutorial")
         {
-            Debug.Log("QUIERO CAMBIAR AL JUEGO");
             LoadScene("Nivel1");
         }
     }

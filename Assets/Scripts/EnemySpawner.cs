@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
     void InstantiateEnemy()
     {
         index = UnityEngine.Random.Range(0, enemies.Length);
-        Instantiate(enemies[index]);
+        Instantiate(enemies[index], this.transform.position, Quaternion.identity);
         StartCoroutine(enableSpawnCR());
     }
 
