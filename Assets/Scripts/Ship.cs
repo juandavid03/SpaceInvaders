@@ -51,12 +51,12 @@ public class Ship : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.A))
         {
-            nave.AddForce(new Vector2(force, 0));
+            nave.velocity = Vector2.zero;
         }
 
         if (Input.GetKeyUp(KeyCode.D))
         {
-            nave.AddForce(new Vector2(-force, 0));
+            nave.velocity = Vector2.zero;
         }
 
         if (Input.GetKeyDown(KeyCode.K))
